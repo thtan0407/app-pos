@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4c638833-a711-4fb7-8112-dccb109e8b4d" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="ProjectId" id="1blORQ3TGqGnR9JZRSSJEuYDlTN" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../binh/mina-carrenal" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\MyPC\Desktop\anhnam-freelance\app-pos" />
+      <recent name="C:\Users\MyPC\Desktop\app-pos" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4c638833-a711-4fb7-8112-dccb109e8b4d" name="Default Changelist" comment="" />
+      <created>1589203204460</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1589203204460</updated>
+      <workItem from="1589203205734" duration="903000" />
+      <workItem from="1590134243121" duration="5490000" />
+      <workItem from="1590151178232" duration="5166000" />
+      <workItem from="1590204287119" duration="1597000" />
+      <workItem from="1590207818214" duration="1126000" />
+      <workItem from="1590216380084" duration="10087000" />
+      <workItem from="1590281599711" duration="4091000" />
+      <workItem from="1590309968859" duration="5424000" />
+      <workItem from="1590368725071" duration="37000" />
+      <workItem from="1590486290542" duration="483000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1590486774060">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1590486774060" />
+    <state x="301" y="65" width="763" height="598" key="find.popup" timestamp="1590287670470">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="301" y="65" width="763" height="598" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1590287670470" />
+  </component>
+</project>

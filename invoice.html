@@ -1,0 +1,698 @@
+<!doctype html>
+<html class="fixed sidebar-left-collapsed">
+
+<head>
+
+    <!-- Basic -->
+    <meta charset="UTF-8">
+
+    <title>Invoice | Okler Themes | Porto-Admin</title>
+    <meta name="keywords" content="HTML5 Admin Template" />
+    <meta name="description" content="Porto Admin - Responsive HTML5 Template">
+    <meta name="author" content="okler.net">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <!-- Web Fonts  -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Shadows+Into+Light" rel="stylesheet" type="text/css">
+
+    <!-- Vendor CSS -->
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="assets/vendor/magnific-popup/magnific-popup.css" />
+    <link rel="stylesheet" href="assets/vendor/bootstrap-datepicker/css/datepicker3.css" />
+
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="assets/stylesheets/theme.css" />
+
+    <!-- Skin CSS -->
+    <link rel="stylesheet" href="assets/stylesheets/skins/default.css" />
+
+    <!-- Theme Custom CSS -->
+    <link rel="stylesheet" href="assets/stylesheets/theme-custom.css">
+
+    <!-- Head Libs -->
+    <script src="assets/vendor/modernizr/modernizr.js"></script>
+    <style>
+        .coupon-input {
+            display: flex;
+            align-items: center;
+        }
+        
+        .coupon-input>span {
+            white-space: nowrap;
+        }
+        
+        .coupon-input .form-control {
+            flex-grow: 1;
+            margin: 0 10px;
+            width: auto;
+            flex-shrink: 1;
+        }
+        
+        .coupon-input .form-control:last-child {
+            margin: 0;
+        }
+        
+        .invoice .table.table-auto {
+            table-layout: auto;
+        }
+        
+        .invoice-wrap .form-control {
+            border: 0;
+            box-shadow: none;
+            outline: 0;
+            border-radius: 0;
+            border-bottom: 1px solid #8a7c7c;
+            -webkit-border-radius: 0;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+        }
+        
+        .invoice-wrap select.form-control {
+            background-size: 16px;
+            background-image: url('https://cdn2.iconfinder.com/data/icons/font-awesome/1792/caret-down-512.png');
+            background-repeat: no-repeat;
+            background-position: calc(100% - 5px) center;
+            background-color: #f0f0f0;
+            border-bottom: 0;
+            padding-right: 25px;
+        }
+        
+        .wd-100 {
+            width: 100px;
+        }
+        
+        .wd-50 {
+            width: 50px;
+        }
+        
+        .invoice {
+            max-width: 768px;
+            margin: 0 auto;
+        }
+        
+        .invoice table.table>thead:first-child>tr>th {
+            background-color: unset;
+            border-top: 0;
+            font-weight: bold;
+        }
+        
+        .payment .input-group-addon {
+            background: #f0f0f0;
+        }
+        
+        .payment .input-group {
+            width: 100%;
+        }
+        
+        .payment .input-group-addon.text-left {
+            text-align: left;
+        }
+        
+        .payment .input-group-addon input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        
+        .tag-coupon {
+            padding: 4px 12px;
+            height: auto;
+            display: flex;
+        }
+        
+        .tag-coupon .inline-default {
+            flex-grow: 1;
+        }
+        
+        .tag-coupon .tag {
+            display: inline-block;
+            vertical-align: middle;
+            padding: 6px 10px;
+            color: #fff;
+            background: #ff5e58;
+            border-radius: 16px;
+            font-size: 11px;
+            line-height: 1;
+            margin: 5px;
+        }
+        
+        .tag-coupon .tag a {
+            color: #fff;
+            margin-left: 5px;
+        }
+        
+        .tag-coupon input {
+            border: 0;
+            background: transparent;
+            box-shadow: none;
+            outline: 0;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        
+        .bd-r-0 {
+            border-right: 0;
+        }
+        
+        .bd-l-0 {
+            border-left: 0;
+        }
+        
+        .print-only {
+            display: none;
+        }
+        
+        @media print {
+            body {
+                font-size: 7pt;
+            }
+            .payment-sec,
+            .staff-tips,
+            .tips-table,
+            .invoice-wrap address .lb,
+            .invoice-wrap .col-sm-4,
+            .user-discount .col-md-6:first-child,
+            .payment-sec+.text-right,
+            .invoice-wrap+hr,
+            .set-discount {
+                display: none;
+            }
+            .invoice-wrap header .col-sm-8 {
+                width: 100%;
+                text-align: center;
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 0 !important;
+            }
+            .invoice header {
+                border-bottom: 0;
+                margin-bottom: 0;
+            }
+            .invoice-wrap header address {
+                display: block;
+                text-align: left;
+                margin-right: 0 !important;
+                margin-bottom: 15px !important;
+            }
+            .invoice-wrap header .ib img {
+                width: 50px;
+            }
+            .invoice {
+                width: 300px;
+                background-color: white;
+                margin: 20px;
+                padding: 15px;
+                padding-bottom: 30px;
+                margin: 0 auto;
+            }
+            [class^="col-"] {
+                padding: 5px;
+            }
+            .row {
+                margin: 0 -5px;
+            }
+            .print-only {
+                display: block;
+            }
+            .text-center {
+                text-align: center;
+            }
+            .h5 {
+                font-size: 1.15rem;
+            }
+            .invoice {
+                padding: 0;
+            }
+            .product-carts.mt-xlg {
+                margin-top: 0 !important;
+            }
+            .receipt-title {
+                margin-bottom: 0;
+            }
+            .product-carts h4 {
+                margin-top: 0 !important;
+                margin-bottom: 0 !important;
+                font-size: 1.25rem;
+                display: none;
+            }
+            .invoice .bill-to,
+            .invoice .bill-data {
+                padding: 15px 0 0;
+            }
+            .bill-to .h5 {
+                font-size: 1rem;
+            }
+            .invoice .bill-data .value {
+                display: inline;
+            }
+            .invoice .bill-data p {
+                line-height: 1;
+                margin-bottom: 5px !important;
+            }
+            .user-discount .table tr td:last-child {
+                text-align: right !important;
+            }
+            .table-responsive {
+                margin-bottom: 0;
+            }
+            .user-discount>.row {
+                margin-top: -15px;
+            }
+            .user-discount .table.h5 {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="body">
+        <div class="inner-wrapper">
+            <section role="main" class="content-body">
+                <!-- start: page -->
+                <section class="panel invoice">
+                    <div class="panel-body">
+                        <div class="invoice-wrap">
+                            <header class="clearfix">
+                                <div class="row">
+                                    <div class="col-sm-4 mt-md">
+                                        <h2 class="h2 mt-none mb-sm text-dark text-bold">Receipt</h2>
+                                        <h4 class="h4 m-none text-dark text-bold">#76598345</h4>
+                                    </div>
+                                    <div class="col-sm-8 text-right mt-md mb-md">
+                                        <address class="ib mr-xlg">
+												<strong>Nailroom</strong>
+												<br/>
+												24 Henrietta Street, London, England
+												<br/>
+												Phone: +12 3 4567-8901
+												<br/>
+												admin@Nailroom.com
+											</address>
+                                        <div class="ib">
+                                            <img src="https://thtan0407.github.io/appCuss/images/logo.png" alt="Nailroom" width="75" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </header>
+                            <h2 class="print-only text-center receipt-title">Receipt</h2>
+                            <div class="bill-info">
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <div class="bill-to">
+                                            <p class="h5 mb-xs text-dark text-semibold mt-none">Customer:</p>
+                                            <address>
+												<span class="lb">Full name: </span>Trương Văn Lam
+												<br/>
+												<span class="lb">Phone: </span> +61 3 8376 6284
+												<br/>
+												<span class="lb">Email: </span> info@nailroom.com
+											</address>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <div class="bill-data text-right">
+                                            <p class="mb-none">
+                                                <span class="text-dark">Receipt Date:</span>
+                                                <span class="value">05/20/2014</span>
+                                            </p>
+                                            <p class="mb-none">
+                                                <span class="text-dark">Due Date:</span>
+                                                <span class="value">06/20/2014</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="staff-tips mt-lg">
+
+
+                                <h4 class="mb-lg  text-bold">Staff tips</h4>
+                                <div class="table-responsive">
+                                    <table class="table table-auto tips-table" id="js-table-tip">
+                                        <thead>
+                                            <tr class="h5 text-dark">
+                                                <th class="text-semibold">Staff name</th>
+                                                <th class=" text-semibold">Service</th>
+                                                <th class=" text-semibold wd-100">Tips</th>
+                                                <th class="wd-50"></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class=" text-dark">
+                                                    <select name="" id="" class="form-control">
+													<option value="Trương Văn Lam - 1" selected>Trương Văn Lam - 1</option>
+													<option value="Trương Văn Lam - 2">Trương Văn Lam - 2</option>
+													<option value="Trương Văn Lam - 3">Trương Văn Lam - 3</option>
+												</select>
+                                                </td>
+                                                <td class="text-center">
+                                                    <select name="" id="" class="form-control">
+													<option value="" selected>Mona template - 1</option>
+													<option value="">Mona template - 2</option>
+													<option value="">Mona template - 3</option>
+												</select>
+                                                </td>
+                                                <td class="text-center"><input type="text" class="form-control" placeholder="$0.00"></td>
+                                                <td><a href="#" class=" btn btn-danger delete-tip"><i class="fa fa-times"></i></a></td>
+                                            </tr>
+                                            <tr>
+                                                <td class=" text-dark">
+                                                    <select name="" id="" class="form-control">
+													<option value="Trương Văn Lam - 1">Trương Văn Lam - 1</option>
+													<option value="Trương Văn Lam - 2" selected>Trương Văn Lam - 2</option>
+													<option value="Trương Văn Lam - 3">Trương Văn Lam - 3</option>
+												</select>
+                                                </td>
+                                                <td class="text-center">
+                                                    <select name="" id="" class="form-control">
+													<option value="">Mona template - 1</option>
+													<option value="" selected>Mona template - 2</option>
+													<option value="">Mona template - 3</option>
+												</select>
+                                                </td>
+                                                <td class="text-center"><input type="text" class="form-control" placeholder="$0.00"></td>
+                                                <td><a href="#" class=" btn btn-danger delete-tip"><i class="fa fa-times"></i></a></td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <td colspan="4">
+                                                    <a href="javascript:;" id="js-add-tip" class="btn btn-outline-primary btn-icon add-tip"><i class="fa fa-plus left" aria-hidden="true"></i>Add staff</a>
+                                                </td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="product-carts mt-xlg">
+                                <h4 class="mb-lg text-bold">Product cart</h4>
+                                <div class="table-responsive">
+                                    <table class="table invoice-items">
+                                        <thead>
+                                            <tr class="h5 text-dark">
+                                                <th id="cell-item" class="text-semibold">Name</th>
+                                                <th id="cell-qty" class="text-center text-semibold">Quantity</th>
+                                                <th id="cell-price" class="text-center text-semibold">Price</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class=" text-dark">Polygel - Full With Shellac</td>
+                                                <td class="text-center">2</td>
+                                                <td class="text-center">$58.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td class=" text-dark">Mona HTML5 Template</td>
+                                                <td class="text-center">1</td>
+                                                <td class="text-center">$28.00</td>
+                                            </tr>
+                                            <tr>
+                                                <td class=" text-dark">Giftcard discount 50%</td>
+                                                <td class="text-center">1</td>
+                                                <td class="text-center">$58.00</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <div class="user-discount">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="coupon-input">
+                                                <span class="text-semibold text-dark h6">Discount:</span>
+                                                <select name="" class="form-control">
+												<option value="option-1">Coupon type 1</option>
+												<option value="option-2">Coupon type 2</option>
+												<option value="option-3">Coupon type 3</option>
+											</select>
+                                                <select name="" class="form-control">
+												<option value="coupon-001">Coupon-001</option>
+												<option value="coupon-002">Coupon-002</option>
+												<option value="coupon-003">Coupon-003</option>
+											</select>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <table class="table h5 text-dark mt-none">
+                                                <tbody>
+                                                    <tr class="b-top-none">
+                                                        <td colspan="2">Discount</td>
+                                                        <td class="text-left"><span class="text-danger">- <span>$7.00</span></span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="" id="discount-manager">
+                                                        <td colspan="2">Manager discount (<span id="dc-percent">0%</span>) <a href="javascript:;" data-togglee="modal" data-target="#js-set-discount" class="set-discount">Change</a></td>
+                                                        <td class="text-left">
+                                                            <span class="text-danger">- <span>$0.00</span></span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="">
+                                                        <td colspan="2">Total</td>
+                                                        <td class="text-left">$73.00</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2">Tips total</td>
+                                                        <td class="text-left">$32.00</td>
+                                                    </tr>
+                                                    <tr class="h4 text-semibold">
+                                                        <td colspan="2">Grand Total</td>
+                                                        <td class="text-left">$105.00</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr/>
+                        <div class="payment-sec mt-lg">
+                            <h4 class="mb-lg text-bold">Payment method</h4>
+                            <div class="payment">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <div class="input-group-addon wd-100 text-left bd-r-0">
+                                            <label class="mb-none">
+												<input type="checkbox" >
+												<span >Check</span >
+											</label>
+
+                                        </div>
+                                        <input type="text" placeholder="$0.00" class="form-control">
+                                        <div class="input-group-addon wd-100 bd-r-0 bd-l-0">
+                                            <label class="mb-none">
+												<span>Note</span>
+											</label>
+
+                                        </div>
+                                        <input type="text" placeholder="Note..." class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <div class="input-group-addon wd-100 text-left bd-r-0">
+                                            <label class="mb-none">
+												<input type="checkbox" >
+												<span >Credit</span >
+											</label>
+
+                                        </div>
+                                        <input type="text" placeholder="$0.00" class="form-control">
+                                        <div class="input-group-addon wd-100 bd-r-0 bd-l-0">
+                                            <label class="mb-none">
+												<span>Note</span>
+											</label>
+
+                                        </div>
+                                        <input type="text" placeholder="Note..." class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <div class="input-group-addon wd-100 text-left bd-r-0">
+                                            <label class="mb-none">
+												<input type="checkbox" >
+												<span>Cash</span>
+											</label>
+
+                                        </div>
+                                        <input type="text" placeholder="$0.00" class="form-control">
+                                        <div class="input-group-addon wd-100 bd-r-0 bd-l-0">
+                                            <label class="mb-none">
+												<span>Cash back</span>
+											</label>
+
+                                        </div>
+                                        <input type="text" placeholder="$0.00" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <div class="input-group-addon wd-100 text-left">
+                                            <label class="mb-none">
+												<input type="checkbox" >
+												<span>Giftcard</span>
+											</label>
+
+                                        </div>
+                                        <div class="form-control tag-coupon">
+
+                                            <input type="text" placeholder="" class="inline-default">
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-right mr-lg mt-lg">
+                            <a href="#" class="btn btn-default">Submit Invoice</a>
+                            <a href="pages-invoice-print.html" target="_blank" class="btn btn-primary ml-sm"><i class="fa fa-print"></i> Print</a>
+                        </div>
+                        <div class="text-center">
+                            <h5>Receipt number: #3323232</h5>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- end: page -->
+            </section>
+        </div>
+
+    </section>
+    <div id="js-set-discount" class="zoom-anim-dialog modal-block modal-block-primary mfp-hide">
+        <section class="panel">
+            <header class="panel-heading">
+                <h3 class="panel-title">Set custom discount</h3>
+            </header>
+            <div class="panel-body">
+                <div class="modal-wrapper p-none">
+                    <div class="row">
+                        <div class="form-group col-md-4">
+                            <label>Discount (%):</label>
+                            <input type="number" value="0" class="form-control" placeholder="0">
+                        </div>
+                        <div class="form-group col-md-8">
+                            <label>Manager password:</label>
+                            <input type="password" value="" class="form-control" placeholder="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="panel-footer">
+                <div class="row">
+                    <div class="col-md-12 text-right">
+                        <button class="btn btn-primary modal-confirm mfp-dismiss">Confirm</button>
+                        <button class="btn btn-default modal-dismiss mfp-dismiss">Cancel</button>
+                    </div>
+                </div>
+            </footer>
+        </section>
+    </div>
+    <!-- Vendor -->
+    <script src="assets/vendor/jquery/jquery.js"></script>
+    <script src="assets/vendor/jquery-browser-mobile/jquery.browser.mobile.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.js"></script>
+    <script src="assets/vendor/nanoscroller/nanoscroller.js"></script>
+    <script src="assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+    <script src="assets/vendor/magnific-popup/magnific-popup.js"></script>
+    <script src="assets/vendor/jquery-placeholder/jquery.placeholder.js"></script>
+
+    <!-- Theme Base, Components and Settings -->
+    <script src="assets/javascripts/theme.js"></script>
+
+    <!-- Theme Custom -->
+    <script src="assets/javascripts/theme.custom.js"></script>
+
+    <!-- Theme Initialization Files -->
+    <script src="assets/javascripts/theme.init.js"></script>
+    <script>
+        const addTipBtn = document.getElementById('js-add-tip');
+
+        const addNewStaff = (e) => {
+            e.preventDefault();
+            const tipTable = document.getElementById('js-table-tip');
+            const tipHtml = `
+			
+				<td class=" text-dark">
+					<select name="" id="" class="form-control">
+						<option value="Trương Văn Lam - 1">Trương Văn Lam - 1</option>
+						<option value="Trương Văn Lam - 2" selected>Trương Văn Lam - 2</option>
+						<option value="Trương Văn Lam - 3">Trương Văn Lam - 3</option>
+					</select>
+				</td>
+				<td class="text-center">
+					<select name="" id="" class="form-control">
+						<option value="">Mona template - 1</option>
+						<option value="" selected>Mona template - 2</option>
+						<option value="">Mona template - 3</option>
+					</select>
+				</td>
+				<td class="text-center"><input type="text" class="form-control" placeholder="$0.00"></td>
+				<td><a href="#" class=" btn btn-danger delete-tip"><i class="fa fa-times"></i></a></td>
+			
+			`;
+            const tipBody = tipTable.getElementsByTagName('tbody')[0];
+            let newRow = document.createElement('tr');
+            newRow.innerHTML = tipHtml;
+            tipBody.appendChild(newRow);
+        };
+
+        const deleteStaff = (e) => {
+            e.preventDefault();
+            const closestTr = e.target.closest('tr');
+            if (closestTr !== undefined && closestTr !== null)
+                closestTr.parentNode.removeChild(closestTr);
+        }
+        const addTagChip = (e) => {
+
+            if (e.keyCode === 13) {
+                let inputBox = e.target;
+                let tagBox = inputBox.closest('.tag-coupon');
+                const tag = document.createElement('span');
+                tag.setAttribute('class', 'tag');
+                tag.innerHTML = `${inputBox.value.trim()}<a href="javascript:;" class="delete-tag  text-white"><i class="fa fa-times"></i></a>`;
+                tagBox.prepend(tag);
+                inputBox.value = '';
+            }
+        };
+        const deleteTagChip = (e) => {
+            let tag = e.target.closest('.tag');
+            tag.parentNode.removeChild(tag);
+        };
+        //Init event
+        addTipBtn.addEventListener('click', addNewStaff);
+        document.querySelector('.tag-coupon .inline-default').addEventListener('keypress', addTagChip);
+        document.addEventListener('click', function(e) {
+            // loop parent nodes from the target to the delegation node
+            for (let target = e.target; target && target != this; target = target.parentNode) {
+                if (target.matches('.delete-tip')) {
+                    deleteStaff.call(target, e);
+                    break;
+                }
+                if (target.matches('.mfp-dismiss')) {
+                    $.magnificPopup.close();
+                    break;
+                }
+                if (target.matches('.delete-tag')) {
+                    deleteTagChip.call(target, e);
+                    break;
+                }
+            }
+        }, false);
+
+        $('.set-discount').magnificPopup({
+            items: {
+                type: 'inline',
+                src: '#js-set-discount'
+            }
+        });
+    </script>
+</body>
+
+</html>
