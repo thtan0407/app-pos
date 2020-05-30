@@ -21,7 +21,8 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../binh/mina-carrenal" />
+    <property name="last_opened_file_path" value="D:/VietCore/music" />
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -49,6 +50,16 @@
       <workItem from="1590309968859" duration="5424000" />
       <workItem from="1590368725071" duration="37000" />
       <workItem from="1590486290542" duration="483000" />
+      <workItem from="1590565229680" duration="1272000" />
+      <workItem from="1590582965418" duration="2701000" />
+      <workItem from="1590627793936" duration="15000" />
+      <workItem from="1590671702089" duration="3448000" />
+      <workItem from="1590714212411" duration="47000" />
+      <workItem from="1590715070050" duration="1971000" />
+      <workItem from="1590734313065" duration="709000" />
+      <workItem from="1590741593175" duration="4543000" />
+      <workItem from="1590755733370" duration="3866000" />
+      <workItem from="1590800732634" duration="188000" />
     </task>
     <servers />
   </component>
@@ -56,13 +67,25 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1590486774060">
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1590800920104">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1590486774060" />
-    <state x="301" y="65" width="763" height="598" key="find.popup" timestamp="1590287670470">
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1590800920104" />
+    <state x="500" y="287" key="NewPhpFileDialog" timestamp="1590565311761">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="301" y="65" width="763" height="598" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1590287670470" />
+    <state x="500" y="287" key="NewPhpFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1590565311761" />
+    <state x="184" y="6" key="SettingsEditor" timestamp="1590745411152">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="184" y="6" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1590745411152" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1590715250894">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="498" height="446" key="SwitcherDM/0.0.1366.728@0.0.1366.728" timestamp="1590715250894" />
+    <state x="301" y="65" width="763" height="598" key="find.popup" timestamp="1590757448744">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="301" y="65" width="763" height="598" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1590757448744" />
   </component>
 </project>

@@ -1,6 +1,6 @@
 :root {
-    --main-color: #FFB120;
-    --hover-color: #c6881c;
+    --main-color: #34495e;
+    --hover-color: #6281a0;
     --hover-button: #0f1b28;
 }
 
@@ -157,13 +157,13 @@ a {
     display: flex;
     align-items: flex-start;
     position: absolute;
-    bottom: 30px;
+    bottom: 0px;
     left: 50%;
     width: 100%;
     transform: translateX(-50%);
-    padding: 30px 15px 0;
+    padding: 30px 15px 30px;
     border-top: 1px solid #d9d9d9;
-    background: #f8f8f8
+    background: #fff
 }
 
 .wrapper__footer .footer__item {
@@ -872,6 +872,127 @@ a {
     margin-left: 5px;
 }
 
+.btn_create:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    transform: scaleX(0);
+    transform-origin: 100% 50%;
+    transition: transform .3s ease-in-out;
+    -webkit-transition: transform .3s ease-in-out;
+    background: #00adff
+}
+
+.btn_create:hover:after,
+.btn_create:focus:after {
+    transform: scaleX(1);
+    transform-origin: 0% 50%;
+}
+
+.btn_update {
+    margin-left: 5px;
+    box-shadow: none !important;
+    border: 0;
+    outline: none !important;
+    text-align: center;
+    padding: 6px 20px;
+    transition: .4s all;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    background: #4CA14E;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.btn_update span {
+    color: #fff;
+    position: relative;
+    z-index: 2;
+}
+
+.btn_update span img {
+    width: 13px;
+    margin-left: 5px;
+}
+
+.btn_update:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    transform: scaleX(0);
+    transform-origin: 100% 50%;
+    transition: transform .3s ease-in-out;
+    -webkit-transition: transform .3s ease-in-out;
+    background: #5dc95f
+}
+
+.btn_update:hover:after,
+.btn_update:focus:after {
+    transform: scaleX(1);
+    transform-origin: 0% 50%;
+}
+
+.btn_copy {
+    margin-left: 5px;
+    box-shadow: none !important;
+    border: 0;
+    outline: none !important;
+    text-align: center;
+    padding: 6px 20px;
+    transition: .4s all;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    background: #313539;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.btn_copy span {
+    color: #fff;
+    position: relative;
+    z-index: 2;
+}
+
+.btn_copy span img {
+    width: 13px;
+    margin-left: 5px;
+}
+
+.btn_copy:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    transform: scaleX(0);
+    transform-origin: 100% 50%;
+    transition: transform .3s ease-in-out;
+    -webkit-transition: transform .3s ease-in-out;
+    background: #41464A
+}
+
+.btn_copy:hover:after,
+.btn_copy:focus:after {
+    transform: scaleX(1);
+    transform-origin: 0% 50%;
+}
+
+
 .btn_no_color {
     box-shadow: none !important;
     outline: none !important;
@@ -898,7 +1019,7 @@ a {
     margin-left: 5px;
 }
 
-.btn_order{
+.btn_order {
     box-shadow: none !important;
     outline: none !important;
     text-align: center;
@@ -933,38 +1054,16 @@ a {
 }
 
 .btn_order span,
-.btn_save span{
+.btn_save span {
     color: #fff;
     position: relative;
     z-index: 2;
 }
 
 .btn_order span img,
-.btn_save span img{
+.btn_save span img {
     width: 13px;
     margin-left: 5px;
-}
-
-.btn_create:after {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    transform: scaleX(0);
-    transform-origin: 100% 50%;
-    transition: transform .3s ease-in-out;
-    -webkit-transition: transform .3s ease-in-out;
-    background: #00adff
-}
-
-.btn_create:hover:after,
-.btn_create:focus:after {
-    transform: scaleX(1);
-    transform-origin: 0% 50%;
 }
 
 .btn_no_color:after {
@@ -990,7 +1089,7 @@ a {
 }
 
 .btn_order:after,
-.btn_save:after{
+.btn_save:after {
     position: absolute;
     content: "";
     width: 100%;
@@ -1009,7 +1108,7 @@ a {
 .btn_order:hover:after,
 .btn_order:focus:after,
 .btn_save:focus:after,
-.btn_save:hover:after{
+.btn_save:hover:after {
     transform: scaleX(1);
     transform-origin: 0% 50%;
 }
@@ -1085,7 +1184,7 @@ a {
 }
 
 .search__input_right .search__input_item,
-.search__input_left{
+.search__input_left {
     background-color: #f9f9f9;
 }
 
@@ -1106,7 +1205,7 @@ a {
     color: #333;
 }
 
-.search__input_right .search__input_item select{
+.search__input_right .search__input_item select {
     padding: 0 15px 0 0 !important;
     left: 90px !important;
     width: calc(100% - 90px) !important;
@@ -1115,7 +1214,7 @@ a {
 
 .search__input_left input,
 .search__input_right .search__input_item input,
-.search__input_right .search__input_item select{
+.search__input_right .search__input_item select {
     position: absolute;
     width: 100%;
     top: 50%;
@@ -1131,7 +1230,7 @@ a {
     background: #f9f9f9;
 }
 
-.search__input_left button{
+.search__input_left button {
     position: absolute;
     top: 50%;
     right: 0;
@@ -1235,14 +1334,36 @@ a {
     margin-right: 0;
 }
 
-.justify-content-end{
+.justify-content-end {
     justify-content: flex-end;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.custom-breadcrumb {
+    background-color: transparent;
+}
+
+.custom-breadcrumb a i {
+    font-size: 15px;
+}
+
+.custom-breadcrumb,
+.custom-breadcrumb a {
+    font-size: 14px;
 }
 
 .wrapper__theme {
     height: auto !important;
     background: #f8f8f8
 }
+
 .wrapper__list_service {
     width: 70%;
 }
@@ -1251,6 +1372,738 @@ a {
     border-left: 1px solid #d1d1d1;
 }
 
-@media screen and (min-width: 768px) {
+.wrapper__payment {
+    display: flex;
+    align-items: stretch;
+    background: #f8f9f9;
+}
 
+.payment__left {
+    width: 75%;
+    padding: 0 15px;
+}
+
+.payment__list {
+    width: 100%;
+}
+
+.payment__list table tr td,
+.payment__list table tr th {
+    vertical-align: middle !important;
+}
+
+.payment__list table tr td a img {
+    width: 16px;
+}
+
+.payment__list table tr td b,
+.payment__list table tr td strong {
+    font-weight: bold;
+}
+
+.payment__header {
+    padding: 1rem 0;
+}
+
+.payment__h_title {
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.payment__h_title h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0;
+    margin-left: 5px;
+    font-weight: bold;
+    color: #34495e
+}
+
+.payment__h_title img {
+    width: 24px;
+}
+
+.payment__h_action {
+    width: 50%;
+    justify-content: flex-end;
+}
+
+.h_action_button {
+    display: inline-block;
+    padding: 5px 15px;
+    background: #34495e;
+    font-size: 1rem;
+    border-radius: 4px;
+    transition: .3s all;
+    position: relative;
+    overflow: hidden;
+    margin: 0 5px;
+}
+
+.h_action_button span {
+    position: relative;
+    z-index: 2;
+    color: #fff !important;
+    display: flex;
+    align-items: center;
+}
+
+.h_action_button span img {
+    width: 20px;
+    margin-right: 5px;
+}
+
+.h_action_button:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    left: 0;
+    top: 0;
+    height: 100%;
+    transition: .3s all ease-in-out;
+    background: #56789b;
+}
+
+.h_action_button:hover:after {
+    width: 100%;
+}
+
+.payment__search {
+    width: 60%;
+}
+
+.payment__select {
+    width: 40%;
+}
+
+.payment__search {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.payment__search .form-group,
+.payment__select .form-group {
+    margin-bottom: 0;
+}
+
+.custom-control {
+    height: 34px;
+    line-height: 34px;
+    box-shadow: none !important;
+    font-size: .9rem;
+    max-width: 200px;
+}
+
+.payment__h_action,
+.search__button_new,
+.search__button_name {
+    display: flex;
+    align-items: center;
+}
+
+.payment__select .custom-control {
+    max-width: 150px;
+}
+
+.payment__select .form-group {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.payment__select .form-group label {
+    margin-bottom: 0;
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #444
+}
+
+
+.payment__submit,
+.payment__gift {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.payment__gift {
+    justify-content: flex-start;
+}
+
+.payment__submit .form-group {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 5px;
+    width: 75%;
+    margin-bottom: 0;
+}
+
+.payment__submit .form-group label {
+    margin-bottom: 0;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #444
+}
+
+.search__button_submit {
+    width: 25%;
+}
+
+.search__button_submit {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.payment__submit .form-group .custom-control {
+    max-width: 50px;
+    margin: 0 10px;
+}
+
+.payment__count {
+    margin-top: 1rem;
+}
+
+.payment__count .table {
+    margin-bottom: 0;
+}
+
+.payment__count_title {
+    font-size: 1.3rem;
+    margin-bottom: 0;
+    margin-left: 5px;
+    font-weight: bold;
+    color: #34495e;
+    padding: 1rem 0;
+}
+
+.payment__row {
+    margin: 1rem 0;
+}
+
+.payment__right {
+    width: 25%;
+    padding: 0 15px;
+    background: #fff;
+    flex: 1;
+}
+
+.btn_cancel {
+    display: inline-block;
+    padding: 5px 15px;
+    background: #747474;
+    font-size: 1rem;
+    border-radius: 4px;
+    transition: .3s all;
+    position: relative;
+    overflow: hidden;
+    margin: 0 5px;
+    border: 0;
+    outline: none !important;
+    box-shadow: none !important;
+    cursor: pointer;
+}
+
+.btn_cancel span {
+    position: relative;
+    z-index: 2;
+    color: #fff !important;
+    display: flex;
+    align-items: center;
+}
+
+.btn_cancel span img {
+    width: 20px;
+    margin-right: 5px;
+}
+
+.btn_cancel:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    left: 0;
+    top: 0;
+    height: 100%;
+    transition: .3s all ease-in-out;
+    background: #999999;
+}
+
+.btn_cancel:hover:after {
+    width: 100%;
+}
+
+.btn_yellow {
+    display: inline-block;
+    padding: 5px 15px;
+    background: #F48B0C;
+    font-size: 1rem;
+    border-radius: 4px;
+    transition: .3s all;
+    position: relative;
+    overflow: hidden;
+    margin: 0 5px;
+    border: 0;
+    outline: none !important;
+    box-shadow: none !important;
+    cursor: pointer;
+}
+
+.btn_yellow span {
+    position: relative;
+    z-index: 2;
+    color: #fff !important;
+    display: flex;
+    align-items: center;
+}
+
+.btn_yellow span img {
+    width: 20px;
+    margin-right: 5px;
+}
+
+.btn_yellow:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    left: 0;
+    top: 0;
+    height: 100%;
+    transition: .3s all ease-in-out;
+    background: #ff9e00;
+}
+
+.btn_yellow:hover:after {
+    width: 100%;
+}
+
+.btn_edit {
+    display: inline-block;
+    padding: 5px 15px;
+    background: #34495e;
+    font-size: 1rem;
+    border-radius: 4px;
+    transition: .3s all;
+    position: relative;
+    overflow: hidden;
+    margin: 0 5px;
+    border: 0;
+    outline: none !important;
+    box-shadow: none !important;
+    cursor: pointer;
+}
+
+.btn_edit span {
+    position: relative;
+    z-index: 2;
+    color: #fff !important;
+    display: flex;
+    align-items: center;
+}
+
+.btn_edit span img {
+    width: 20px;
+    margin-right: 5px;
+}
+
+.btn_edit:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    left: 0;
+    top: 0;
+    height: 100%;
+    transition: .3s all ease-in-out;
+    background: #56789b;
+}
+
+.btn_edit:hover:after {
+    width: 100%;
+}
+
+.button__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.button__top > button {
+    width: 50%;
+}
+
+.button__top > button > span {
+    justify-content: center;
+}
+
+.payment__textContent {
+    margin-left: 5px;
+}
+
+.payment__textContent h4 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    color: #34495e;
+}
+
+.payment__textContent h5, .payment__textContent p {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 1rem;
+}
+
+.payment__textContent p {
+    font-size: .9rem;
+}
+
+.payment__textContent .form-group {
+    display: flex;
+    margin-bottom: 0.5rem;
+    align-items: center;
+}
+
+.payment__textContent .form-group label {
+    margin-bottom: 0;
+    margin-left: 5px;
+}
+
+.table-striped > tbody > tr.payment__total,
+.payment__discount {
+    background: #34495e !important;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.payment__add_discount {
+    margin-top: -1rem;
+}
+
+.discount__arrow .form-group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.discount__arrow .form-group label {
+    margin-bottom: 0;
+    width: 50%;
+    margin-right: 5px;
+    font-weight: bold;
+    color: #333;
+    font-size: .9rem;
+}
+
+
+.discount__arrow .form-group select {
+    width: 50%;
+    margin-left: 5px;
+    outline: none;
+    box-shadow: none !important;
+    border-radius: 0;
+}
+
+.discount__arrow .form-group input {
+    max-width: 50%;
+    margin-right: 5px;
+    outline: none;
+    box-shadow: none !important;
+    border-radius: 0;
+}
+
+.discount__arrow .form-group button {
+    width: 50%;
+    margin-left: 5px;
+    border: 1px solid transparent !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.discount__arrow .form-group button span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.payment__border {
+    border-top: 1px solid #d1d1d1;
+    padding-top: 1rem;
+    margin-top: 1.5rem;
+}
+
+.payment__comment label {
+    font-size: 1rem;
+    color: #333;
+    font-weight: bold;
+}
+
+.payment__comment .form-group.d-flex label {
+    margin-bottom: 0;
+    font-size: .9rem;
+    color: #454545;
+    margin-left: 5px;
+}
+
+.payment__complete {
+    margin: 1.5rem 0;
+    text-align: center;
+}
+
+.btn__complete {
+    width: 100%;
+    display: inline-block;
+    padding: 10px 15px;
+    background: #4CA14E;
+    font-size: 1rem;
+    transition: .3s all;
+    position: relative;
+    overflow: hidden;
+    box-shadow: none !important;
+    outline: none !important;
+    border: none
+}
+
+.btn__complete span {
+    position: relative;
+    z-index: 2;
+    color: #fff !important;
+    display: flex;
+    font-size: 1.1rem;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.btn__complete:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    left: 0;
+    top: 0;
+    height: 100%;
+    transition: .3s all ease-in-out;
+    background: #5dc95f;
+}
+
+.btn__complete:hover:after {
+    width: 100%;
+}
+
+.h_action_button span {
+    text-align: center;
+    justify-content: center;
+}
+
+.payment__left {
+    padding-bottom: 15px;
+}
+
+.wrapper__table {
+    height: 415px;
+    overflow-y: scroll;
+}
+
+.wrapper__total {
+    display: flex;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.wrapper__total > div {
+    width: 50%;
+}
+
+.total__text {
+    text-align: right;
+    font-weight: bold;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+.total__value {
+    padding-left: 60px;
+    font-weight: bold;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .payment__left {
+        width: 65%;
+        padding: 0 5px
+    }
+
+    .payment__right {
+        width: 35%;
+        padding: 0 5px
+    }
+
+    .payment__h_title img {
+        width: 20px;
+    }
+
+    .payment__h_title h3 {
+        font-size: 1rem;
+    }
+
+    .h_action_button span img {
+        width: 18px;
+    }
+
+    .payment__search > div {
+        width: 30%;
+    }
+
+    .payment__search > div.search__button_name {
+        width: 40%;
+    }
+
+    .custom-control,
+    .payment__select .custom-control {
+        padding-left: 10px;
+        font-size: .8rem;
+    }
+
+    .payment__select .form-group label {
+        font-size: .8rem;
+    }
+
+    .h_action_button,
+    .btn_yellow,
+    .btn_cancel,
+    .btn_edit {
+        font-size: .8rem;
+        margin: 0 3px;
+        padding: 7px 5px;
+        width: 100%;
+        max-width: 150px;
+    }
+
+    .payment__select .custom-control {
+        max-width: 100px;
+    }
+
+    .wrapper__payment .table td, .wrapper__payment .table th,
+    .wrapper__table .table td, .wrapper__table .table th {
+        padding: .5rem;
+        font-size: .8rem;
+    }
+
+    .wrapper__payment .table td a,
+    .wrapper__payment .table td input {
+        font-size: .8rem;
+    }
+
+    .payment__textContent h5, .payment__textContent p,
+    .payment__submit .form-group label,
+    .payment__count_title,
+    .btn__complete span,
+    .payment__comment label {
+        font-size: .9rem;
+    }
+
+    .payment__gift {
+        width: 40%
+    }
+
+    .payment__submit {
+        width: 60%;
+    }
+
+    .payment__right {
+        padding: 0 10px;
+        border-left: 1px solid #d1d1d1;
+    }
+
+    .discount__arrow .form-group input,
+    .discount__arrow .form-group select {
+        height: 34px;
+        line-height: 34px;
+        font-size: .8rem;
+    }
+
+    .wrapper__footer .footer__item .footer__desc .footer__top {
+        font-size: .9rem;
+    }
+
+    .wrapper__footer .footer__item .footer__desc .footer__top img {
+        width: 16px;
+    }
+
+    .wrapper__footer .footer__item .footer__desc .footer__value {
+        font-size: .9rem;
+    }
+
+    .wrapper__footer .footer__item:first-child {
+        padding-left: 0;
+    }
+
+    .wrapper__footer {
+        padding: 15px;
+    }
+
+    .wrapper__total {
+        padding: 15px 0;
+    }
+
+    .wrapper__table {
+        height: 395px
+    }
+
+    .info_customer img,
+    .delete_customer img, .info_customer img {
+        width: 16px;
+    }
+
+    .info__service_item {
+        flex-wrap: wrap;
+        padding: 0 5px
+    }
+
+    .service__image {
+        width: 50px !important;
+    }
+
+    .service__detail {
+        width: calc(100% - 50px) !important;
+    }
+
+    .info__service_item .service__price {
+        display: flex;
+        width:  100%;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 6px;
+    }
+
+    .total__value,
+    .total__text,
+    .info__title{
+        font-size: 1rem;
+    }
+
+    .info__title_child,
+    .info__service_item .service__detail p{
+        font-size: .9rem;
+    }
+
+    .info__service {
+        height: 265px;
+    }
+
+    .info__total .info__total_text,
+    .info__total .info__total_value{
+        width: 50%;
+        font-size: 1rem;
+    }
+
+    .btn_order {
+        bottom: 15px;
+    }
 }
